@@ -1,0 +1,154 @@
+<!--
+Portfolio - Dark Minimal Template
+Instrucciones rápidas:
+- Abre este archivo en tu navegador para ver el sitio.
+- Para publicar en GitHub Pages: crea un repo llamado username.github.io y sube este archivo como index.html.
+-->
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Eduardo Aleman — Portafolio</title>
+  <meta name="description" content="Portafolio de Eduardo Aleman — Estudiante ADSO, Python, Web y ciberseguridad" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0f13; /* very dark */
+      --card:#0f1720;
+      --muted:#9aa6b2;
+      --accent:#2dd4bf; /* teal */
+      --glass: rgba(255,255,255,0.03);
+      --radius:12px;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,var(--bg),#071018);color:#e6eef4}
+    a{color:var(--accent);text-decoration:none}
+    .container{max-width:980px;margin:0 auto;padding:36px 20px}
+
+    /* Header */
+    header{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#5eead4);display:flex;align-items:center;justify-content:center;color:#021; font-weight:700}
+    .brand h1{font-size:18px;margin:0}
+    nav{display:flex;gap:18px;align-items:center}
+    .btn{padding:8px 12px;border-radius:8px;background:var(--glass);border:1px solid rgba(255,255,255,0.03);font-weight:600}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr;gap:18px;align-items:center;padding:36px 0}
+    .hero .intro{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:20px;border-radius:var(--radius);border:1px solid rgba(255,255,255,0.03)}
+    .intro h2{margin:0 0 8px 0;font-size:26px}
+    .intro p{margin:0;color:var(--muted)}
+    .cta{margin-top:12px}
+
+    /* Cards */
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:22px}
+    .card{background:var(--card);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
+    .card h3{margin:0 0 8px 0}
+    .muted{color:var(--muted);font-size:14px}
+
+    /* Projects */
+    .projects-list{display:grid;gap:12px}
+    .project{display:flex;flex-direction:column;gap:8px;padding:14px;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);border-radius:10px}
+    .project a.btn-small{display:inline-block;padding:6px 10px;border-radius:8px;background:rgba(0,0,0,0.25);border:1px solid rgba(255,255,255,0.03)}
+
+    /* Footer / contact */
+    footer{margin-top:28px;padding:20px;border-radius:10px;text-align:center;color:var(--muted)}
+
+    /* Responsive */
+    @media (max-width:780px){
+      .grid{grid-template-columns:1fr}
+      .logo{width:40px;height:40px}
+      .intro h2{font-size:20px}
+    }
+
+    /* Small effects */
+    .fade{opacity:0;transform:translateY(8px);animation:fadeIn .6s forwards}
+    @keyframes fadeIn{to{opacity:1;transform:none}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="fade" style="animation-delay:.05s">
+      <div class="brand">
+        <div class="logo">TC</div>
+        <div>
+          <h1>Eduardo Aleman</h1>
+          <div class="muted">Estudiante ADSO • Programación • Ciberseguridad</div>
+        </div>
+      </div>
+      <nav>
+        <a class="btn" href="#projects">Proyectos</a>
+        <a class="btn" href="#contact">Contacto</a>
+        <a class="btn" href="https://github.com/elsuperpepe" target="_blank">GitHub</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="intro card fade" style="animation-delay:.12s">
+          <h2>Hola — soy Eduardo Aleman</h2>
+          <p>Estudiante de <strong>ADSO</strong> en el SENA. Me enfoco en desarrollo de software con Python y fundamentos de ciberseguridad. Me gusta aprender y mejorar en mis habilidades cada dia.</p>
+          <div class="cta">
+            <a href="#projects" class="btn">Ver proyectos</a>
+            <a href="#contact" class="btn" style="margin-left:8px">Contactarme</a>
+          </div>
+        </div>
+
+        <div class="card fade" style="animation-delay:.16s">
+          <h3>Resumen rápido</h3>
+          <div class="muted">Python • HTML/CSS • Git • Pygame • Linux (Debian) • Fundamentos de ciberseguridad</div>
+          <div class="grid" style="margin-top:12px">
+            <div class="card">
+              <h4>Educación</h4>
+              <div class="muted">ADSO — SENA (Sept 2025 — Actualidad)</div>
+            </div>
+            <div class="card">
+              <h4>Disponibilidad</h4>
+              <div class="muted">Practicas / proyectos freelance</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" style="margin-top:18px">
+        <h2 class="fade" style="animation-delay:.2s">Proyectos</h2>
+        <div class="projects-list">
+          <article class="project fade" style="animation-delay:.24s">
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <strong>Juego en Python — Pygame</strong>
+              <a class="btn-small" href="https://github.com/elsuperpepe/Alien-Invasion" target="_blank">Ver repo</a>
+            </div>
+            <div class="muted">Juego personal. En desarrollo — se añadirán comentarios y mejoras.</div>
+          </article>
+
+          <article class="project fade" style="animation-delay:.28s">
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <strong>Portafolio Web — FreeCodeCamp</strong>
+              <a class="btn-small" href="https://github.com/elsuperpepe/Portfolio" target="_blank">Ver repo</a>
+            </div>
+            <div class="muted">Estructura inicial en HTML/CSS. Diseño responsive y navegación interna. En proceso de refinamiento.</div>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" style="margin-top:28px">
+        <div class="card">
+          <h3>Contacto</h3>
+          <p class="muted">Escríbeme:</p>
+          <p style="margin:6px 0"><a href="eduardoaleman1122@gmail.com">eduardoaleman1122@gmail.com</a></p>
+          <p class="muted">GitHub:</p>
+          <p><a href="https://github.com/elsuperpepe" target="_blank">github.com/elsuperpepe</a></p>
+        </div>
+      </section>
+
+      <footer>
+      Eduardo Aleman • © 2025
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
+
